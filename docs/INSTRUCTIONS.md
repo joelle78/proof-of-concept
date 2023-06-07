@@ -1,95 +1,130 @@
-# Proof of Concept
+# Server-Side Website
 
-Een data driven online concept voor een opdrachtgever
+Ontwerp en ontwikkel een server-side website voor een opdrachtgever.
+
 
 ## Context
-Deze leertaak hoort bij sprint _Proof of Concept_. Dit is een leertaak die je met een team of individueel uitvoert.
 
-In het college S12W1-01-Sprintplanning-proof-of-concept krijg je uitleg over de opdracht en werkwijze.
+Deze leertaak hoort bij sprint 8 "Server-Side Rendering". Dit is een leertaak die je individueel uitvoert voor een opdrachtgever.
+
+In het college S08W1-01-Sprintplanning-server-side-rendering wordt uitgelegd wat je moet doen. Tijdens de sprintplanning met de opdrachtgever bespreek je de opdracht.
 
 Bij deze leertaak hoort de deeltaak:
-- [Zero State](https://github.com/fdnd-task/proof-of-concept-zero-state)
+- [The Cient - Briefing/Debriefing](https://github.com/fdnd-task/the-client-briefing-debriefing/)
 
 
 ## Doel van deze opdracht
 
-In de sprint Proof of Concept ga je een opdrachtgever helpen met een data-driven online concept. In deze mini-meesterproef laat je zien wat jij kan bereiken in 3 weken. Pas daarbij alle opgedane kennis en vaardigheden toe die je in semester 1 én semester 2 heb opgedaan.
+Je leert hoe je server-side data kunt gebruiken voor het maken van een website.
 
 
 ## Werkwijze
 
-Op basis van een briefing ga je een opdrachtgever helpen met een data-driven online concept.
+Voor deze leertaak krijg je eerst een sprintplanning met de opdrachtgever. Tijdens de sprintplanning bespreek je de taken van het project board en de content in de database. Elke opdrachtgever heeft content voor de website in een database. Met een een REST API kun je deze content gebruiken voor het maken van de website.
 
-
-* Maandag 5 juni krijg je een briefing bij de opdrachtgever. Tijdens de briefing maak je kennis met het bedrijf en wordt besproken wat je gaat maken. 
-
-* Je hebt 3 weken om de opdracht te maken. Hiervoor doorloop je de fases van de DLC [analyseren](#analyseren), [ontwerpen](#ontwerpen), [bouwen](#bouwen), [integreren](#integreren) en [testen](#testen) en pas je verschillende methoden en technieken toe die je hebt geleerd.  
-
-* Donderdag 22 juni ga je weer op bezoek ij de opdrachtgever en ga je laten zien wat je/jullie hebben gemaakt.
-
-* Donderdag 6 juli organiseert FDNDN een EXPO voor bedrijven, vrienden en familie. Op de Expo laat je zien wat je hebt geleerd in het eerste jaar van de opleiding. 
+Voor deze opdracht doorloop je alle fases van de DLC [analyseren](#analyseren), [ontwerpen](#ontwerpen), [bouwen](#bouwen), [integreren](#integreren) en [testen](#testen).
 
 
 ### Analyseren
-In de analysefase inventariseer je wat er moet gebeuren om een taak uit te voeren. 
+In de analysefase inventariseer je wat er moet gebeuren om een taak uit te voeren.
 
 Bijvoorbeeld: grip krijgen op een taak door het voeren van een gesprek met jouw opdrachtgever, schrijven van een debriefing, inventarisatie van bestaande informatie, interface audit, interface inventory, planning, maken van een todo lijst en bepalen van definitions of done.
 
-#### Debriefing
-De debriefing is noodzakelijk voor de opdrachtgever om na te gaan of duidelijk is overgekomen wat hij voor ogen had. Maar ook voor jou en je team om te controleren of je alles goed hebt begrepen en geconcretiseerd.
+#### User Stories
+Kies een of meerdere user stories uit de backlog van het project waar je aan gaat werken. De projecten staan bij [FDND Agency](https://github.com/fdnd-agency).
 
-Voordat je naar de briefing van de opdrachtgever gaat bereid je je voor op het gesprek zodat je weet welke vragen je moet stellen. Na de briefing stuur je de opdrachtgever een debriefing waarin je in eigen woorden opschrijft wat jij denkt dat de opdracht inhoudt.
+Bekijk per user story welke content in de REST API staat.
 
-In de deeltaak [The Cient - Briefing/Debriefing](https://github.com/fdnd-task/the-client-briefing-debriefing/) staat hoe je je goed kan voorbreiden op de briefing. 
+Bekijk per user story relevant studentenwerk uit semester 1.
+
+#### Briefing/debriefing
+Schrijf een debriefing. De debriefing is noodzakelijk voor de opdrachtgever om na te gaan of duidelijk is overgekomen wat hij voor ogen had. Maar ook voor jou om te controleren of je alles goed hebt begrepen en geconcretiseerd.
+
+#### Inrichten ontwikkelomgeving
+
+Fork deze leertaak en clone het naar je systeem. 
+
+Je gaat een server-side website bouwen met Node/Express/EJS gebaseerd op een REST API met JSON. 
+Installeer de Node ontwikkelomgeving en installeer de packages die je nodig hebt. Maak de files en folders aan die je nodig hebt op de Node server. 
+
+Test de Node server door de JSON van de REST API te fetchen en te loggen. 
+
+### Bronnen analyseerfase
+
+* [Introduction to the server side](https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Introduction)
+* [Client-side vs. Server-side: what’s the difference?](https://medium.com/@donotapply/client-side-vs-server-side-whats-the-difference-a933341cd60e)
+* [Node.js Ultimate Beginner’s Guide in 7 Easy Steps](https://www.youtube.com/watch?v=ENrzD9HAZK4)
+* [Learn JSON in 10 Minutes](https://www.youtube.com/watch?v=iiADhChRriM&t=513s)
 
 
 ### Ontwerpen
-In de ontwerpfase neem je ontwerpbeslissingen en zorg je dat je precies weet wat je moet gaan bouwen. 
+In de ontwerpfase neem je ontwerpbeslissingen en zorg je dat je precies weet wat je moet gaan bouwen.
 
-Bijvoorbeeld: het maken van idee-schetsen, wireframes en wireflows tekenen, labels bepalen, responsive layout uitwerken, breakpoints bepalen en breakdowns maken voor onderzoek naar semantische HTML elementen die je nodig hebt, hoe je de layout in CSS zou kunnen maken en welke JS en CSS je nodig hebt voor interacties en animaties.
+Bijvoorbeeld: het maken van idee-schetsen, wireframes en wireflows tekenen. Content analyseren en onderzoek doen naar semantische HTML elementen die je nodig hebt, hoe je de layout in CSS zou kunnen maken en welke JS en CSS je nodig hebt voor interacties en animaties.
+
+#### Schetsen
+Schets de user story in een wireframe of wireflow. Bepaal de verschillende breakpoints die je nodig hebt.  
+
+Maak een breakdown van de ingewikkelde componenten die je wil maken. Misschien wil je een carousel ontwerpen, of een responsive menu? 
+Welke HTML, CSS en JS heb je daarvoor nodig?
+
+Schrijf bij je schets welke elementen statisch zijn en welke elementen dynamsch. 
+
+Schrijf bij je schets welke onderdelen van een pagina je in _partials_ kan opdelen.
+
 
 ### Bouwen
-In de bouwfase realiseer je de beslissingen uit de ontwerpfase. 
+In de bouwfase realiseer je de beslissingen uit de ontwerpfase.
 
-Bijvoorbeeld: toepassen van HTML, CSS en JS, werken volgens conventies en best practices, toegankelijke code schrijven en mobile first toepassen.
+Je bouwt de website met Node, Express en EJS op de server en je gebruikt client-side technieken HTML, CSS of JS voor het responsive ontwerp of interactieve funcionaliteiten.
+
+
+#### Bronnen bouwfase
+
+<!-- * [Using EJS template engine with Express.js](https://www.topcoder.com/thrive/articles/using-ejs-template-engine-with-express-js) -->
+<!-- * [Rendering Views with Node, Express, and EJS](https://medium.com/@bloomaman/rendering-views-with-node-express-and-ejs-415af1493c74) -->
+* [Master EJS template engine with Node.js and Expressjs](https://medium.com/swlh/master-ejs-template-engine-with-node-js-and-expressjs-979cc22b69be)
+* [How to Use JSON in Node.js](http://www.jsonexample.com/how-to-use-json-in-node-js/)
+
+
 
 
 ### Integreren
-In de integratiefase voer je de aanpassingen door zodat iedereen ze kan zien. 
+In de integratiefase voer je de aanpassingen door zodat iedereen ze kan zien.
 
-Bijvoorbeeld: het comitten en pushen van code en publiceren met behulp van Github Pages.
+Als je helemaal klaar bent en alles lokaal werkt ga je verder met het publiceren van jouw project op internet. Omdat we met Node werken is dit iets ingewikkelder dan voorheen, er moet namelijk een serveromgeving opgestart worden. Wij gebruiken cyclic.sh als hostingpartij maar je mag natuurlijk je eigen voorkeur volgen als die anders is.
+
 
 ### Testen
-In de testfase controleer je of jouw aanpassingen werken zoals bedoeld en pas je zo nodig jouw ontwerp of de code aan om te beantwoorden aan jouw bevindingen. 
+In de testfase controleer je of jouw aanpassingen werken zoals bedoeld en pas je zo nodig jouw ontwerp of de code aan om te beantwoorden aan jouw bevindingen.
 
 Bijvoorbeeld: uitvoeren van code/design reviews, user tests met gebruikers, toegankelijkheid testen met lighthouse en handmatige tests, je bevindingen documenteren en bepalen of je nog een iteratie maakt.
 
-## Criteria
 
-Focus sprint 12 - Je gebruikt API's en databases voor het ontwerpen en ontwikkelen van gebruiksvriendelijke interactieve toepassingen voor het web.
+
+
+## Criteria
+*Definitions of done*
+
+Focus sprint 8 - De focus van deze sprint ligt op het maken van een opdracht voor een opdrachtgever, leren hoe je op de server data kunt laden en presenteren.
 
 Doel van deze opdracht:
-* Je gaat alles wat je hebt geleerd toepassen om een opdracht voor een opdrachtgever te maken.
 
-Voor deze leertaak gelden de gedragscriteria: 
-* Samenwerken: Je werkt in teams, vraagt begeleiding waar nodig en geeft feedback aan teamleden.
-* Samenwerken: Je draagt verantwoording voor eigen resultaten, verwerkt ontvangen feedback en wijst teamleden op hun verantwoording.
-* Samenwerken: Je identificeert diversiteit binnen teams en handelt respectvol naar anderen.
-* Communiceren: Je luistert en vraagt door, neemt wat een ander zegt serieus.
-* Communiceren: Je kan ontwerpkeuzes, eigen ideeën en producten begrijpelijk overbrengen aan belanghebbenden.
-* Communiceren: Je documenteert op professionele wijze en houdt voortgang bij.
-* Probleemoplossend vermogen: Je analyseert een vraag, signaleert knelpunten en volgt de aangeboden oplossingsrichting.
-* Probleemoplossend vermogen: Je combineert aangeboden principes en conventies op het gebied van frontend, interface design en vormgeving om een passende oplossing voor een opdrachtgever te realiseren.
-* Probleemoplossend vermogen:  Je schetst om gedachten en processen te verkennen en abstracte begrippen over te brengen.
-* Leren vermogen: Je kent eigen capaciteiten en beperkingen, vergelijkt dit met het vermogen van anderen en maakt dit bespreekbaar
+* Je leert hoe je server-side data kunt gebruiken voor het maken van een website.
 
+Voor deze leertaak gelden de gedragscriteria:
+
+* C: Je luistert en vraagt door, neemt wat een ander zegt serieus
+* C: Je kan ontwerpkeuzes, eigen ideeën en producten begrijpelijk overbrengen aan belanghebbenden
+* P: Je combineert aangeboden principes en conventies op het gebied van frontend, interface design en vormgeving om een passende oplossing voor een opdrachtgever te realiseren
+* ~~L: Je volgt aangeboden internationale ontwikkelingen in het vakgebied~~
 
 Deze opdracht is done als:
-- [ ] Je hebt gewerkt volgens de verschillende fases van de development-lifecycle en je hebt je werk gedocumenteerd in de Readme en Wiki
+
+- [ ] Je hebt een website ontworpen en gemaakt met Node, Express en EJS en een REST API
+- [ ] Je website is online gepubliceerd
+- [ ] Je hebt je proces bijgehouden in de Wiki
 - [ ] Je toont aan dat je in de analysefase verschillende methoden en technieken hebt ingezet om te inventariseren wat er moet gebeuren
 - [ ] Je toont aan dat je in de ontwerpfase verschillende methoden en technieken hebt ingezet die ervoor zorgen dat je precies weet wat je moet bouwen
-- [ ] Je toont aan dat je in de bouwfase verschillende methoden en technieken hebt ingezet om het ontwerp te realiseren
-- [ ] Je toont aan dat je in de integratiefase verschillende methoden en technieken hebt ingezet om je website live te zetten
-- [ ] Je toont aan dat je in de testfase verschillende methoden en technieken hebt ingezet om het ontwerp te testen en verbeteren
-- [ ] De code staat op Github en heeft een live url
+- [ ] Je toont aan dat je in de bouwfase verschillende server-side en client-side methoden en technieken hebt ingezet om het ontwerp te realiseren
 
