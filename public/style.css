@@ -60,3 +60,8 @@ h5 {
     font-weight: 900;
 }
 
+/* LEAFLET MAP*/
+#map {
+    height: 500px;
+    width: 800px;
+}
