@@ -15,7 +15,7 @@ Een applicatie om realtime in en uitgaande vluchten van en naar Schiphol airport
 
 ## Beschrijving
 
-De opdracht van sprint 11 is een front-end applicatie te ontwikkelen waarbij de vertrekkende of aankomende vluchten van
+De opdracht van sprint 12 is een front-end applicatie te ontwikkelen waarbij de vertrekkende of aankomende vluchten van
 Schiphol op een kaart worden weergegeven. Het doel van deze opdracht is om onze vaardigheden op het gebied van
 front-end ontwikkeling te versterken en ervaring op te doen met het werken met externe API's.
 

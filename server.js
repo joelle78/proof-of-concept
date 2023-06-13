@@ -1,19 +1,39 @@
-// Importeer express uit de node_modules map
 import express from 'express'
+import fetch from 'node-fetch';
+import * as path from 'path'
+import { createServer } from 'http'
 
 // Maak een nieuwe express server aan
 const server = express()
+const http = createServer(server)
+
+// Serveer client-side bestanden
+server.use(express.static(path.resolve('public')))
 
 // Stel ejs in als template engine en geef de 'views' map door
 server.set('view engine', 'ejs')
 server.set('views', './views')
 
-// Gebruik de map 'public' voor statische resources
-server.use(express.static('public'))
-
 // hoe json gebruikt moet worden
 server.use(express.json())
 server.use(express.urlencoded({extended: true}))
+
+// .env file configuration
+// require('dotenv').config();
+
+//.env file keys
+// const api_key = process.env.API_KEY;
+
+
+// Stel het poortnummer in en start express
+server.set('port', process.env.PORT || 8000)
+server.listen(server.get('port'), function () {
+    console.log(`Application started on http://localhost:${server.get('port')}`)
+})
+
+
+// console.log(process.env);
+
 
 // Maak een route voor de index
 server.get('/', async function (req, res) {
@@ -35,11 +55,7 @@ server.get('/', async function (req, res) {
 // getFlights();
 
 
-// Stel het poortnummer in en start express
-server.set('port', process.env.PORT || 8000)
-server.listen(server.get('port'), function () {
-    console.log(`Application started on http://localhost:${server.get('port')}`)
-})
+
 
 
 
