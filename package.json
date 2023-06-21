@@ -8,7 +8,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -24,13 +24,15 @@
   "homepage": "https://github.com/fdnd-task/server-side-rendering#readme",
   "dependencies": {
     "axios": "^1.4.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.1.4",
-    "ejs": "^3.1.8",
+    "ejs": "^3.1.9",
     "express": "^4.18.2",
     "fetch": "^1.1.0",
     "node": "^20.2.0",
     "node-env-run": "^4.0.2",
     "node-fetch": "^3.3.1",
+    "nodemon": "^2.0.22",
     "socket.io": "^4.6.2"
   },
   "repository": {

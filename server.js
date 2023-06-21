@@ -1,11 +1,17 @@
 import express from 'express'
 import fetch from 'node-fetch';
 import * as path from 'path'
-import { createServer } from 'http'
+import cors from 'cors';
+import ejs from 'ejs';
+import axios from 'axios';
+
+// .env file configuration
+import {config} from 'dotenv';
+
+config();
 
 // Maak een nieuwe express server aan
 const server = express()
-const http = createServer(server)
 
 // Serveer client-side bestanden
 server.use(express.static(path.resolve('public')))
@@ -18,41 +24,89 @@ server.set('views', './views')
 server.use(express.json())
 server.use(express.urlencoded({extended: true}))
 
-// .env file configuration
-// require('dotenv').config();
-
-//.env file keys
-// const api_key = process.env.API_KEY;
-
-
 // Stel het poortnummer in en start express
-server.set('port', process.env.PORT || 8000)
+server.set('port', process.env.PORT | 4000)
 server.listen(server.get('port'), function () {
     console.log(`Application started on http://localhost:${server.get('port')}`)
 })
 
 
-// console.log(process.env);
+async function getJSON() {
+    try {
+        const response = await fetch("https://api.schiphol.nl/public-flights/flights?includedelays=false&page=0&sort=%2BscheduleTime", {
+            mode: 'cors',
+            headers: {
+                "Accept": "application/json",
+                "resourceversion": "v4",
+                "app_id": "ced176ca",
+                "app_key": process.env.API_KEY,
+            }
+        });
 
 
-// Maak een route voor de index
-server.get('/', async function (req, res) {
-    const url = ('https://api.buurtcampus-oost.fdnd.nl/api/v1/stekjes')
-    const data = await fetch (url).then ((response)=> response.json())
-    res.render('index', data)
-})
+        const options = await response.json();
+        console.log(options)
+        console.log("Success:", options);
+    } catch (error) {
+        console.error("Error:", error);
 
+    }
+}
 
-// Maak een route voor de index
-// const api_url = "https://api.schiphol.nl/public-flights";
+getJSON();
+
+async function render() {
+    try {
+        const response = await fetch("https://api.schiphol.nl/public-flights/flights?includedelays=false&page=0&sort=%2BscheduleTime", {
+            mode: 'cors',
+            headers: {
+                "Accept": "application/json",
+                "resourceversion": "v4",
+                "app_id": "ced176ca",
+                "app_key": process.env.API_KEY,
+            }
+        });
+
+        // setInterval(render, 60000);
+
+// Render de gegevens met behulp van EJS
+//         const data = await response.json();
+//         console.log(data); // Verify the structure of the data object
 //
-// async function getFlights() {
-//     const response = await fetch(api_url);
-//     const data = await response.json();
-//     console.log(data);
+//         server.get('/', (request, response) => {
+//             response.render('index', { flights: data.flights });
+//         });
+//
+//     } catch (error) {
+//         console.error("Er is een fout opgetreden bij het ophalen van de gegevens:", error);
+//     }
 // }
-//
-// getFlights();
+
+// render();
+
+// Get the first 10 items from the 'flights' array
+        const data = await response.json();
+        console.log(data); // Verify the structure of the data object
+
+        const firstTenFlights = data.flights.slice(0, 10);
+
+        server.get('/', (request, response) => {
+            response.render('index', {flights: firstTenFlights});
+        });
+
+        // Schedule the next render after 1 minute
+        setInterval(render, 60000);
+
+    } catch (error) {
+        console.error("Er is een fout opgetreden bij het ophalen van de gegevens:", error);
+    }
+}
+
+render();
+
+
+
+
 
 
 

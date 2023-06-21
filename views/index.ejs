@@ -1,22 +1,75 @@
 <%- include('./partials/head') %>
 
-
 <body>
 
+<section id="section-departure" class="departures">
 
-<main>
+
+    <div class="flex-container-flight-dashboard">
+
+        <div class="container-date">
+            <h1><span>Date</span></h1>
+            <% flights.forEach(function(flight) { %>
+                <li> <%= flight.scheduleDate %></li>
+
+            <% }); %>
+        </div>
 
 
-    <h1>My first map</h1>
+        <div class="container-flight-number">
+            <h1><span>Flight number</span></h1>
 
-    <div id="map">
+            <% flights.forEach(function(flight) { %>
+                <li> <%= flight.flightNumber %></li>
+
+            <% }); %>
+        </div>
+
+        <div class="container-flight-name">
+            <h1><span>Flight name</span></h1>
+            <% flights.forEach(function(flight) { %>
+                <li> <%= flight.flightName %></li>
+
+            <% }); %>
+        </div>
+
+        <div class="container-schedule-time">
+            <h1><span>Schedule time</span></h1>
+            <% flights.forEach(function(flight) { %>
+                <li> <%= flight.scheduleTime %></li>
+
+            <% }); %>
+        </div>
+
+        <div class="container-terminal">
+            <h1><span>Terminal</span></h1>
+
+            <% flights.forEach(function(flight) { %>
+                <li>
+                    <% if (flight.terminal)  { %>
+                        <%= flight.terminal %>
+                    <% }else{ %>
+                        t.b.a
+                    <% } %>
+                </li>
+
+            <% }); %>
+        </div>
+
+        <div class="container-route">
+            <h1><span>Route</span></h1>
+            <% flights.forEach(function(flight) { %>
+                <li> <%= flight.route.destinations %></li>
+
+            <% }); %>
+        </div>
     </div>
+</section>
 
-
-</main>
-
+<script src="app.js"></script>
 </body>
 
-<%- include('./partials/foot') %>
+</html>
 
+<%- include('./partials/foot.ejs') %>
 
