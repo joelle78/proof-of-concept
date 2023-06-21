@@ -27,6 +27,7 @@ Het dashboard weergeeft vertrekkende of aankomende vluchten van of naar Schiphol
 - Flight name
 - Schedule time
 - Terminal
+- Route
 
 De functies die nog toegevoegd worden aan de applicatie zijn:
 - Een filterfunctie

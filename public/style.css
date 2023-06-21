@@ -33,16 +33,23 @@ nav {
 .flex-container-nav {
     display: flex;
     flex-direction: row;
+}
 
+.flex-container-nav a {
+    text-decoration: none;
+    color: var(--primary-font);
+    font-size: 1.3em;
+    padding-left: 1550px;
+    padding-top: 1em;
 }
 
 .logo-nav-bar img {
     width: 10em;
-
+    margin: 1em 0 0 5em;
 }
 
-.world-map a {
-    float: right;
+.world-map {
+    padding-left: 1560px;
 }
 
 /* MEDIA QUERY TABLET NAV*/
@@ -57,6 +64,42 @@ nav {
         width: 5em;
     }
 }
+
+/* POPUP MAP*/
+.world-map {
+    display: flex;
+    flex-direction: column;
+}
+
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 1000px;
+    height: 1000px;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 9999;
+}
+
+/* Styling for the close button */
+#close-popup {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1em;
+    float: right;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* LEAFLET */
+
+#map { height: 180px; }
+
 
 /* DEPARTURES PAGE*/
 .departures {
@@ -145,3 +188,4 @@ li {
 
     }
 }
+
