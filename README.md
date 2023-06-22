@@ -1,8 +1,8 @@
-# Schiphol flight tracker
+# Schiphol flight dashboard
 
 Een applicatie om realtime in en uitgaande vluchten van en naar Schiphol airport te volgen.
 
-![plantswap-performance-tablet_laptop_and_smartphone_mockup](https://github.com/joelle78/performance-matters-optimized-website/assets/112861375/c6ef207b-8881-40fc-9d47-39cacba36306)
+![schiphol-dashboard-mockup](public/assets/mockup-dashboard.jpg)
 
 ## Inhoudsopgave
 
@@ -19,9 +19,22 @@ De opdracht van sprint 12 is een front-end applicatie te ontwikkelen waarbij de 
 Schiphol via dashboard worden weergegeven. Het doel van deze opdracht is om onze vaardigheden op het gebied van
 front-end ontwikkeling te versterken en ervaring op te doen met het werken met externe API's.
 
+## Zero states
+
+In de Zero State van een website maak je de volgende dingen duidelijk: Is dat wat ik zoek op deze pagina? Waar is het?
+Hoe kan ik mijn taak volbrengen? Mijn ontwerpen van de zero state zijn als volgt. 
+
+
+![alt text](public/assets/zero-states-1.png)
+
+![alt text](public/assets/zero-states-2.png)
+
+![alt text](public/assets/zero-states-3.png)
+
 ## Gebruik
 
 Het dashboard weergeeft vertrekkende of aankomende vluchten van of naar Schiphol. De data die worden weergegeven zijn:
+
 - Datum
 - Flight number
 - Flight name
@@ -30,13 +43,14 @@ Het dashboard weergeeft vertrekkende of aankomende vluchten van of naar Schiphol
 - Route
 
 De functies die nog toegevoegd worden aan de applicatie zijn:
+
 - Een filterfunctie
 - Een map die verschillende airports weergeeft
-- Automatisch refreshen data API 
 
 ## Kenmerken
 
 Voor deze applicatie is er gebruik gemaakt van:
+
 - HTML
 - CSS
 - EJS
