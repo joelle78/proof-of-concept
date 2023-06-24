@@ -30,7 +30,6 @@ server.listen(server.get('port'), function () {
     console.log(`Application started on http://localhost:${server.get('port')}`)
 })
 
-
 async function getJSON() {
     try {
         const response = await fetch("https://api.schiphol.nl/public-flights/flights?includedelays=false&page=0&sort=%2BscheduleTime", {
@@ -42,7 +41,6 @@ async function getJSON() {
                 "app_key": process.env.API_KEY,
             }
         });
-
 
         const options = await response.json();
         console.log(options)
